@@ -1,0 +1,309 @@
+# 🎬 IMDb Movie Data ETL Pipeline
+
+## 📌 Project Overview
+
+The IMDb Movie Data ETL Pipeline is a Data Analyst project developed using Python, MySQL, Pandas, SQLAlchemy, and Matplotlib. This project demonstrates the complete ETL (Extract, Transform, Load) process by collecting movie information from the OMDb API, cleaning and transforming the data, storing it in a MySQL database, and generating visualizations for analysis.
+
+The project is designed to automate the process of movie data collection and provide meaningful insights through SQL queries and graphical analysis.
+
+---
+
+## 🎯 Project Objective
+
+The main objective of this project is to build a complete ETL pipeline that automates movie data processing.
+
+The application performs the following tasks:
+
+- Extracts movie information from the OMDb API.
+- Cleans and transforms the raw JSON data.
+- Stores the processed data into a MySQL database.
+- Performs SQL-based data analysis.
+- Generates visualizations using Matplotlib.
+
+This project demonstrates how real-world data flows from an external API into a database for analysis and reporting.
+
+---
+
+## 🛠 Technologies Used
+
+- Python
+- Pandas
+- Requests
+- SQLAlchemy
+- PyMySQL
+- MySQL
+- Matplotlib
+- JSON
+- OMDb API
+
+---
+
+## 📂 Project Structure
+
+```
+IMDb_Project/
+│
+├── config.py
+├── extract.py
+├── transform.py
+├── load.py
+├── analysis.py
+├── visualization.py
+├── main.py
+│
+├── data
+│   ├── imdb_raw.json
+│   └── imdb_clean.csv
+│
+├── graphs
+│   └── imdb_rating.png
+│
+└── README.md
+```
+
+---
+
+## ⚙️ ETL Workflow
+
+```
+User Input
+     │
+     ▼
+Enter Movie Name
+     │
+     ▼
+OMDb API
+     │
+     ▼
+Extract.py
+     │
+     ▼
+Raw JSON
+     │
+     ▼
+Transform.py
+     │
+     ▼
+Clean CSV
+     │
+     ▼
+Load.py
+     │
+     ▼
+MySQL Database
+     │
+     ▼
+Analysis.py
+     │
+     ▼
+Visualization.py
+```
+
+---
+
+## ✨ Features
+
+- Accepts movie name as user input.
+- Fetches movie details from the OMDb API.
+- Stores raw API response as a JSON file.
+- Cleans and transforms movie data using Pandas.
+- Saves cleaned data into a CSV file.
+- Loads processed data into a MySQL database.
+- Performs SQL-based analysis.
+- Generates graphical visualizations using Matplotlib.
+- Modular ETL architecture for easy maintenance.
+
+---
+
+## 📊 Data Collected
+
+The project collects the following movie information:
+
+- Movie Title
+- Release Year
+- Runtime
+- Genre
+- Director
+- Writer
+- Actors
+- Language
+- Country
+- IMDb Rating
+- IMDb Votes
+- Awards
+- Plot
+- Movie Type
+- IMDb ID
+
+---
+
+## 🗄 Database
+
+Database Name:
+
+```
+imdb_project
+```
+
+Table Name:
+
+```
+movies
+```
+
+The cleaned movie data is stored inside the MySQL database for further analysis.
+
+---
+
+## 📈 Visualizations
+
+The project currently generates:
+
+- IMDb Rating Comparison Chart
+
+Future visualizations may include:
+
+- Movies by Genre
+- Movies by Year
+- Top Rated Movies
+- Movie Count by Language
+- Rating Distribution
+
+---
+
+## 🚀 How to Run the Project
+
+### Step 1: Clone the Repository
+
+```bash
+git clone <repository_link>
+```
+
+### Step 2: Install Required Libraries
+
+```bash
+pip install requests pandas matplotlib sqlalchemy pymysql
+```
+
+### Step 3: Create MySQL Database
+
+```sql
+CREATE DATABASE imdb_project;
+```
+
+### Step 4: Configure API Key
+
+Open **config.py**
+
+Replace:
+
+```python
+API_KEY = "YOUR_API_KEY"
+```
+
+with your OMDb API key.
+
+---
+
+### Step 5: Run the Project
+
+```bash
+python main.py
+```
+
+Enter a movie name when prompted.
+
+---
+
+## 📋 Sample Output
+
+Example Input
+
+```
+Enter Movie Name:
+Inception
+```
+
+Example Output
+
+```
+Movie Found!
+
+Title       : Inception
+Year        : 2010
+IMDb Rating : 8.8
+Genre       : Action, Adventure, Sci-Fi
+
+Data Extracted Successfully
+Data Cleaned Successfully
+Data Loaded into MySQL
+Graph Generated Successfully
+```
+
+---
+
+## 📚 Skills Demonstrated
+
+- ETL Pipeline Development
+- REST API Integration
+- Data Cleaning
+- Data Transformation
+- Data Analysis
+- SQL
+- MySQL
+- Python Programming
+- Pandas
+- SQLAlchemy
+- Data Visualization
+- JSON Processing
+- File Handling
+
+---
+
+## 🔮 Future Enhancements
+
+- Fetch multiple movies automatically.
+- Prevent duplicate movie entries using IMDb ID.
+- Add logging functionality.
+- Implement exception handling.
+- Build an interactive Power BI Dashboard.
+- Schedule automatic data updates.
+- Create a Streamlit web application.
+
+---
+
+## 📖 Learning Outcomes
+
+Through this project, I learned:
+
+- How REST APIs work.
+- How to fetch JSON data using Python.
+- Data cleaning using Pandas.
+- Connecting Python with MySQL.
+- SQL database operations.
+- Building an ETL pipeline.
+- Data visualization using Matplotlib.
+- Organizing a Python project using a modular architecture.
+
+---
+
+## 👨‍💻 Author
+
+**Gnaneswar**
+
+Aspiring Data Analyst
+
+Skills:
+- Python
+- SQL
+- MySQL
+- Excel
+- Power BI
+- Pandas
+- Matplotlib
+
+---
+
+## ⭐ Project Summary
+
+This project demonstrates a complete end-to-end ETL pipeline where movie data is extracted from the OMDb API, transformed into a clean format, stored in a MySQL database, analyzed using SQL, and visualized using Python. It showcases practical skills in API integration, data engineering fundamentals, database management, and data analysis, making it a strong portfolio project for aspiring Data Analysts.
